@@ -1,8 +1,8 @@
 // ── Site URL ─────────────────────────────────────────────────────────────
-// PLACEHOLDER — Rafael doesn't have a production domain yet.
-// Replace this one value before launch; metadata, sitemap, robots.txt,
+// Production URL on Vercel. Rafael doesn't have a custom domain yet;
+// when he does, replace this one value: metadata, sitemap, robots.txt,
 // canonical URLs, and structured data all read from here.
-export const siteUrl = "https://adit.studio";
+export const siteUrl = "https://adi-t.vercel.app";
 
 export type Service = {
   id: string;
