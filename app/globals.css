@@ -84,40 +84,6 @@
     -webkit-text-fill-color: transparent;
     color: currentColor;
   }
-
-  /* Showreel: slow Ken Burns drift, 5 slides x 8s = 40s loop */
-  .showreel-slide {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    animation-duration: 40s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-  }
-  .showreel-pan-a { animation-name: showreel-pan-a; }
-  .showreel-pan-b { animation-name: showreel-pan-b; }
-  .showreel-pan-c { animation-name: showreel-pan-c; }
-  @keyframes showreel-pan-a {
-    0% { opacity: 0; transform: scale(1.02) translate(0, 0); }
-    4% { opacity: 1; }
-    16% { opacity: 1; }
-    24% { opacity: 0; transform: scale(1.14) translate(-2%, 1.5%); }
-    100% { opacity: 0; transform: scale(1.14) translate(-2%, 1.5%); }
-  }
-  @keyframes showreel-pan-b {
-    0% { opacity: 0; transform: scale(1.14) translate(2%, -1%); }
-    4% { opacity: 1; }
-    16% { opacity: 1; }
-    24% { opacity: 0; transform: scale(1.02) translate(0, 0); }
-    100% { opacity: 0; transform: scale(1.02) translate(0, 0); }
-  }
-  @keyframes showreel-pan-c {
-    0% { opacity: 0; transform: scale(1.05) translate(-1.5%, 0); }
-    4% { opacity: 1; }
-    16% { opacity: 1; }
-    24% { opacity: 0; transform: scale(1.13) translate(1.5%, -1.5%); }
-    100% { opacity: 0; transform: scale(1.13) translate(1.5%, -1.5%); }
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -132,18 +98,10 @@
   }
 
   .animate-marquee,
-  .animate-blink,
-  .showreel-slide {
+  .animate-blink {
     animation: none;
   }
 
-  .showreel-slide:not(:first-child) {
-    display: none;
-  }
-
-  .showreel-slide:first-child {
-    opacity: 1;
-  }
 
   *,
   *::before,

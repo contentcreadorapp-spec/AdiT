@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 
 type SplitRevealProps = {
   text: string;
@@ -11,8 +11,9 @@ type SplitRevealProps = {
 
 /**
  * Letter-by-letter entrance: each character rises and fades in sequence.
- * Respects prefers-reduced-motion (shows instantly) and keeps the full
- * text readable by assistive tech via aria-label.
+ * Letters are grouped into nowrap words so lines only ever break between
+ * words, never mid-word. Respects prefers-reduced-motion (shows instantly)
+ * and keeps the full text readable by assistive tech via aria-label.
  */
 export default function SplitReveal({ text, className, stagger = 26 }: SplitRevealProps) {
   const ref = useRef<HTMLSpanElement>(null);
@@ -40,21 +41,33 @@ export default function SplitReveal({ text, className, stagger = 26 }: SplitReve
     return () => io.disconnect();
   }, []);
 
+  const words = text.split(" ");
+  let letterIndex = 0;
+
   return (
     <span ref={ref} className={className} aria-label={text}>
-      {text.split("").map((ch, i) => (
-        <span
-          key={i}
-          aria-hidden="true"
-          className="inline-block"
-          style={{
-            opacity: visible ? 1 : 0,
-            transform: visible ? "translateY(0)" : "translateY(0.45em)",
-            transition: `opacity 0.45s ease ${i * stagger}ms, transform 0.6s cubic-bezier(0.22,1,0.36,1) ${i * stagger}ms`,
-          }}
-        >
-          {ch === " " ? " " : ch}
-        </span>
+      {words.map((word, wi) => (
+        <Fragment key={wi}>
+          <span aria-hidden="true" className="inline-block whitespace-nowrap">
+            {word.split("").map((ch, i) => {
+              const n = letterIndex++;
+              return (
+                <span
+                  key={i}
+                  className="inline-block"
+                  style={{
+                    opacity: visible ? 1 : 0,
+                    transform: visible ? "translateY(0)" : "translateY(0.45em)",
+                    transition: `opacity 0.45s ease ${n * stagger}ms, transform 0.6s cubic-bezier(0.22,1,0.36,1) ${n * stagger}ms`,
+                  }}
+                >
+                  {ch}
+                </span>
+              );
+            })}
+          </span>
+          {wi < words.length - 1 ? " " : null}
+        </Fragment>
       ))}
     </span>
   );

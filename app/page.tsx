@@ -3,7 +3,6 @@ import Link from "next/link";
 import Ticker from "@/components/Ticker";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
-import Showreel from "@/components/Showreel";
 import ProjectCard from "@/components/ProjectCard";
 import Faq from "@/components/Faq";
 import JsonLd from "@/components/JsonLd";
@@ -65,7 +64,7 @@ export default function Home() {
           <h1 className="mt-4 font-display text-[clamp(2.9rem,9.5vw,8rem)] leading-[0.94] font-bold tracking-tight text-balance uppercase">
             <SplitReveal text="Technology that" />
             <br />
-            <span className="bg-signal px-2 text-ink">
+            <span className="bg-signal px-2 text-ink box-decoration-clone">
               <SplitReveal text="actually works." stagger={30} />
             </span>
           </h1>
@@ -106,9 +105,6 @@ export default function Home() {
       </section>
 
       <Ticker />
-
-      {/* ── Showreel: real work, in motion ─────────────────── */}
-      <Showreel />
 
       {/* ── Featured work ────────────────────────────────── */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
