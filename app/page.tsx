@@ -185,6 +185,54 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── From the field: Malibu infrastructure ─────────── */}
+      <section
+        aria-labelledby="field-malibu-heading"
+        className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24"
+      >
+        <SectionHeading
+          kicker="From the field"
+          title={
+            <span id="field-malibu-heading">
+              When the internet kept failing in Malibu.
+            </span>
+          }
+        />
+        <Reveal>
+          <div className="mt-10 rounded-3xl bg-ink p-8 text-paper sm:p-12">
+            <p className="font-mono text-xs tracking-[0.22em] text-signal uppercase">
+              Case file: network infrastructure
+            </p>
+            <p className="mt-6 max-w-3xl font-display text-2xl font-bold leading-snug tracking-tight sm:text-3xl">
+              Repeated ISP outages left a Malibu home with no reliable
+              connection. So we stopped depending on one.
+            </p>
+            <p className="mt-5 max-w-3xl leading-relaxed text-paper/70">
+              Rafa rebuilt the whole-home network from the ground up: Starlink
+              for the internet connection, UniFi hardware carrying it to every
+              corner of the house. This is the unglamorous infrastructure work
+              most web shops never touch. It is half of what ADiT is.
+            </p>
+            <div className="mt-8 grid grid-cols-3 gap-4 border-t border-paper/15 pt-8">
+              {[
+                ["Starlink", "for the connection"],
+                ["UniFi", "for the network"],
+                ["Whole home", "rebuilt end to end"],
+              ].map(([value, label]) => (
+                <div key={label}>
+                  <p className="font-display text-3xl font-bold tracking-tight text-signal sm:text-4xl">
+                    {value}
+                  </p>
+                  <p className="mt-1 font-mono text-xs tracking-[0.14em] text-paper/60 uppercase">
+                    {label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
       {/* ── Who we are ───────────────────────────────────── */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
         <SectionHeading
