@@ -3,6 +3,7 @@ import Link from "next/link";
 import Ticker from "@/components/Ticker";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
+import Showreel from "@/components/Showreel";
 import ProjectCard from "@/components/ProjectCard";
 import Faq from "@/components/Faq";
 import JsonLd from "@/components/JsonLd";
@@ -105,6 +106,9 @@ export default function Home() {
       </section>
 
       <Ticker />
+
+      {/* ── Showreel: real work, in motion ─────────────────── */}
+      <Showreel />
 
       {/* ── Featured work ────────────────────────────────── */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
