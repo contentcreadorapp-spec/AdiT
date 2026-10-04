@@ -75,17 +75,14 @@ export default function Nav() {
           className="fixed inset-0 z-40 flex flex-col bg-paper px-6 pt-28 pb-10 md:hidden"
         >
           <ul className="flex flex-col gap-2">
-            {navLinks.map((link, i) => (
+            {navLinks.map((link) => (
               <li key={link.href} className="border-b border-ink/10">
                 <Link
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="flex items-baseline justify-between py-4 font-display text-4xl font-bold tracking-tight uppercase"
+                  className="flex items-baseline py-4 font-display text-4xl font-bold tracking-tight uppercase"
                 >
                   {link.label}
-                  <span aria-hidden="true" className="font-mono text-xs text-muted">
-                    0{i + 1}
-                  </span>
                 </Link>
               </li>
             ))}

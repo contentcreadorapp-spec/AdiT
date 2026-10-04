@@ -131,6 +131,7 @@ export const projects: Project[] = [
     blurb: "Personal consulting site for Joy Qiao: project leadership, mediation, and strategic communication. Currently in development.",
     disciplines: ["Web design", "Development"],
     image: "/work/joy-desktop.jpg",
+    featured: true,
   },
   {
     slug: "rafael-t-cordero",
@@ -140,7 +141,6 @@ export const projects: Project[] = [
     blurb: "Personal site of Rafael T. Cordero: IT leadership, cybersecurity, education innovation.",
     disciplines: ["Web design", "Development"],
     image: "/work/rafacordero-desktop.jpg",
-    featured: true,
   },
   {
     slug: "hs-roofing",
