@@ -6,6 +6,7 @@ import SectionHeading from "@/components/SectionHeading";
 import ProjectCard from "@/components/ProjectCard";
 import Faq from "@/components/Faq";
 import JsonLd from "@/components/JsonLd";
+import SplitReveal from "@/components/SplitReveal";
 import { projects, services, stats, steps, whyUs, faqs, siteUrl } from "@/content/site";
 
 export const metadata: Metadata = {
@@ -61,9 +62,11 @@ export default function Home() {
             Your business runs on technology.
           </p>
           <h1 className="mt-4 font-display text-[clamp(2.9rem,9.5vw,8rem)] leading-[0.94] font-bold tracking-tight text-balance uppercase">
-            Technology that
+            <SplitReveal text="Technology that" />
             <br />
-            <span className="bg-signal px-2 text-ink">actually&nbsp;works.</span>
+            <span className="bg-signal px-2 text-ink">
+              <SplitReveal text="actually works." stagger={30} />
+            </span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">
             IT infrastructure, cybersecurity, web development, and design —
