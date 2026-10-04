@@ -110,7 +110,7 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <SectionHeading
-            kicker="01 / Selected work"
+            kicker="Selected work"
             title={
               <>
                 Proof,
@@ -142,7 +142,7 @@ export default function Home() {
       <section className="border-y border-ink/10 bg-ink/[0.025]">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
           <SectionHeading
-            kicker="02 / What we do"
+            kicker="What we do"
             title="Four disciplines. One team."
             lede="Most vendors hand you off between departments. With us, the people securing your network are the same people building your site."
           />
@@ -188,7 +188,7 @@ export default function Home() {
       {/* ── Who we are ───────────────────────────────────── */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
         <SectionHeading
-          kicker="03 / Who we are"
+          kicker="Who we are"
           title={
             <>
               Two experts.
@@ -257,7 +257,7 @@ export default function Home() {
       <section className="border-y border-ink/10 bg-ink/[0.025]">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
           <SectionHeading
-            kicker="04 / Why ADiT"
+            kicker="Why ADiT"
             title="Small on purpose."
             lede="We're not an agency with layers. Here's what that gets you."
           />
@@ -282,7 +282,7 @@ export default function Home() {
       {/* ── How we work ──────────────────────────────────── */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
         <SectionHeading
-          kicker="05 / How we work"
+          kicker="How we work"
           title={
             <>
               Five steps.
@@ -319,7 +319,7 @@ export default function Home() {
           <div className="grid gap-10 lg:grid-cols-[1fr_2fr] lg:gap-16">
             <div>
               <SectionHeading
-                kicker="06 / FAQ"
+                kicker="FAQ"
                 title="Asked often, answered honestly."
               />
               <Reveal>
