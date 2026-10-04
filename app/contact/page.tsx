@@ -4,9 +4,9 @@ import SectionHeading from "@/components/SectionHeading";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact ADiT — Start Your Technology Project in Los Angeles",
+  title: "Contact ADiT | Start Your Technology Project in Los Angeles",
   description:
-    "Start a project with ADiT: IT infrastructure, cybersecurity, web development, web design, or marketing. Tell us what's going on — a real person replies.",
+    "Start a project with ADiT: IT infrastructure, cybersecurity, web development, web design, or marketing. Tell us what's going on. A real person replies.",
   alternates: { canonical: "/contact" },
 };
 
@@ -19,7 +19,7 @@ const nextSteps = [
   {
     index: "02",
     title: "We reply",
-    text: "A real human — Kiyo or Rafa — reads your message and gets back to you.",
+    text: "A real human (Kiyo or Rafa) reads your message and gets back to you.",
   },
   {
     index: "03",
@@ -41,7 +41,7 @@ export default function ContactPage() {
             you are.
           </>
         }
-        lede="Tell us what's going on — a project, a problem, or just an idea. We'll take it from there."
+        lede="Tell us what's going on: a project, a problem, or just an idea. We'll take it from there."
       />
 
       <div className="mt-12 grid gap-12 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
@@ -78,7 +78,7 @@ export default function ContactPage() {
                 Los Angeles, California
               </p>
               <p className="mt-2 text-sm leading-relaxed text-muted">
-                Working with clients everywhere — on-site across the LA area for
+                Working with clients everywhere, on-site across the LA area for
                 IT projects.
               </p>
             </div>

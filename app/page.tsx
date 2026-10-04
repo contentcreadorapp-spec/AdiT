@@ -10,9 +10,9 @@ import SplitReveal from "@/components/SplitReveal";
 import { projects, services, stats, steps, whyUs, faqs, siteUrl } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "ADiT — Business Technology in Los Angeles",
+  title: "ADiT | Business Technology in Los Angeles",
   description:
-    "ADiT is a business technology team in Los Angeles. IT infrastructure, cybersecurity, web development, web design, and marketing — handled by Kiyo and Rafa, two people you'll actually talk to.",
+    "ADiT is a business technology team in Los Angeles. IT infrastructure, cybersecurity, web development, web design, and marketing, handled by Kiyo and Rafa, two people you'll actually talk to.",
   alternates: { canonical: "/" },
 };
 
@@ -24,7 +24,7 @@ export default function Home() {
     "@type": "ProfessionalService",
     name: "ADiT",
     description:
-      "Business technology team in Los Angeles: IT infrastructure, cybersecurity, web development, web design, and marketing — run by Kiyo and Rafa.",
+      "Business technology team in Los Angeles: IT infrastructure, cybersecurity, web development, web design, and marketing, run by Kiyo and Rafa.",
     url: `${siteUrl}/`,
     areaServed: { "@type": "City", name: "Los Angeles, CA" },
     founder: [
@@ -69,7 +69,7 @@ export default function Home() {
             </span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">
-            IT infrastructure, cybersecurity, web development, and design —
+            IT infrastructure, cybersecurity, web development, and design,
             handled by two people you&apos;ll actually talk to.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
@@ -202,7 +202,7 @@ export default function Home() {
             <div className="space-y-5 text-lg leading-relaxed">
               <p>
                 We&apos;re <strong className="font-bold">Kiyo</strong> and{" "}
-                <strong className="font-bold">Rafa</strong> — two Venezuelan
+                <strong className="font-bold">Rafa</strong>, two Venezuelan
                 professionals in Los Angeles who decided to stop working in
                 silos and start building things together.
               </p>
@@ -214,7 +214,7 @@ export default function Home() {
               </p>
               <p>
                 Combined, that&apos;s 35+ years of experience pointed at one
-                goal — helping businesses show up online with better websites,
+                goal: helping businesses show up online with better websites,
                 smart marketing, and dependable technology.
               </p>
             </div>

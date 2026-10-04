@@ -53,7 +53,7 @@ export default function ContactForm() {
           Message received.
         </p>
         <p className="mt-3 leading-relaxed text-muted">
-          Thanks for reaching out — we read every message ourselves and we&apos;ll
+          Thanks for reaching out. We read every message ourselves and we&apos;ll
           get back to you shortly.
         </p>
       </div>
@@ -109,7 +109,7 @@ export default function ContactForm() {
       )}
       {status === "not_configured" && (
         <p role="alert" className="rounded-xl border border-ember/40 bg-ember/10 px-4 py-3 text-sm">
-          Our form delivery isn&apos;t connected yet — we&apos;re wiring it up. Please
+          Our form delivery isn&apos;t connected yet. We&apos;re wiring it up. Please
           check back soon.
         </p>
       )}
@@ -122,7 +122,7 @@ export default function ContactForm() {
         {status === "sending" ? "Sending…" : "Send message"}
       </button>
       <p className="font-mono text-xs tracking-[0.14em] text-muted uppercase">
-        No spam, no newsletters — just a reply from a human.
+        No spam, no newsletters, just a reply from a human.
       </p>
     </form>
   );

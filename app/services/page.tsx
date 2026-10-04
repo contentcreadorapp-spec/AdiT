@@ -5,7 +5,7 @@ import SectionHeading from "@/components/SectionHeading";
 import { services } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "Services — IT, Cybersecurity, Web Development & Design in Los Angeles",
+  title: "Services | IT, Cybersecurity, Web Development & Design in Los Angeles",
   description:
     "Four disciplines, one team: IT infrastructure and cybersecurity, web development, web design, and marketing. See what ADiT in Los Angeles can do for your business.",
   alternates: { canonical: "/services" },
@@ -24,7 +24,7 @@ export default function ServicesPage() {
             needs to show up online.
           </>
         }
-        lede="Four disciplines that usually live in separate companies. Here they sit at the same table — which means your tech, your website, and your marketing actually work together."
+        lede="Four disciplines that usually live in separate companies. Here they sit at the same table, which means your tech, your website, and your marketing actually work together."
       />
 
       <div className="mt-14 space-y-6">
@@ -78,7 +78,7 @@ export default function ServicesPage() {
             </h2>
             <p className="mt-3 max-w-xl leading-relaxed text-paper/70">
               Most projects touch more than one discipline. Tell us what&apos;s going on
-              and we&apos;ll point you at the right starting place — honestly.
+              and we&apos;ll point you at the right starting place, honestly.
             </p>
           </div>
           <Link

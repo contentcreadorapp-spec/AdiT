@@ -98,7 +98,7 @@ export default function Nav() {
             Start a project
           </Link>
           <p className="mt-6 font-mono text-xs tracking-[0.18em] text-muted uppercase">
-            Los Angeles, CA — working worldwide
+            Los Angeles, CA · working worldwide
           </p>
         </div>
       )}

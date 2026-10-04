@@ -21,7 +21,7 @@ export const services: Service[] = [
     name: "IT & Security",
     tagline: "The backbone your business runs on.",
     description:
-      "Reliable technology starts with a solid foundation. We assess what you have, plan what you need, and handle the hardware and setup — with security baked in from day one, not bolted on after. Then we stick around to keep it running.",
+      "Reliable technology starts with a solid foundation. We assess what you have, plan what you need, and handle the hardware and setup, with security baked in from day one, not bolted on after. Then we stick around to keep it running.",
     items: [
       "Infrastructure assessments",
       "Cybersecurity strategy",
@@ -38,7 +38,7 @@ export const services: Service[] = [
     name: "Development",
     tagline: "Built from scratch, built to last.",
     description:
-      "We build sites the right way for the job — clean custom code when it matters, the right platform when it doesn't. Either way, you get a fast site you can actually manage.",
+      "We build sites the right way for the job: clean custom code when it matters, the right platform when it doesn't. Either way, you get a fast site you can actually manage.",
     items: [
       "Custom development",
       "Framer & Webflow builds",
@@ -55,7 +55,7 @@ export const services: Service[] = [
     name: "Web design",
     tagline: "A site people actually want to visit.",
     description:
-      "Pretty isn't enough — your site has to be clear, fast, and easy to use. We design around your visitors, not around trends, so the site feels effortless on any screen.",
+      "Pretty isn't enough. Your site has to be clear, fast, and easy to use. We design around your visitors, not around trends, so the site feels effortless on any screen.",
     items: [
       "Responsive layouts",
       "Wireframes & prototypes",
@@ -71,7 +71,7 @@ export const services: Service[] = [
     name: "Marketing",
     tagline: "Get found. Get chosen. Keep growing.",
     description:
-      "A great site nobody sees is a missed opportunity. We help the right people find you, trust you, and come back — with marketing you can measure.",
+      "A great site nobody sees is a missed opportunity. We help the right people find you, trust you, and come back, with marketing you can measure.",
     items: [
       "Brand identity",
       "Marketing strategy",
@@ -100,7 +100,7 @@ export const projects: Project[] = [
     name: "Guarapo Caffé",
     url: "https://www.guarapocaffe.com",
     domain: "guarapocaffe.com",
-    blurb: "Website for a Venezuelan café in L.A. — authentic flavors, café con alma.",
+    blurb: "Website for a Venezuelan café in L.A.: authentic flavors, café con alma.",
     disciplines: ["Web design", "Development"],
     image: "/work/guarapo-desktop.jpg",
     featured: true,
@@ -128,7 +128,7 @@ export const projects: Project[] = [
     name: "Joy Qiao",
     url: "https://services-platform-4.preview.emergentagent.com",
     domain: "joyforprojects.com",
-    blurb: "Personal consulting site for Joy Qiao — project leadership, mediation, and strategic communication. Currently in development.",
+    blurb: "Personal consulting site for Joy Qiao: project leadership, mediation, and strategic communication. Currently in development.",
     disciplines: ["Web design", "Development"],
     image: "/work/joy-desktop.jpg",
   },
@@ -137,7 +137,7 @@ export const projects: Project[] = [
     name: "Rafael T. Cordero",
     url: "https://www.rafacordero.com",
     domain: "rafacordero.com",
-    blurb: "Personal site of Rafael T. Cordero — IT leadership, cybersecurity, education innovation.",
+    blurb: "Personal site of Rafael T. Cordero: IT leadership, cybersecurity, education innovation.",
     disciplines: ["Web design", "Development"],
     image: "/work/rafacordero-desktop.jpg",
     featured: true,
@@ -147,7 +147,7 @@ export const projects: Project[] = [
     name: "H&S Roofing",
     url: "https://www.hsroofingcorp.com",
     domain: "hsroofingcorp.com",
-    blurb: "Website for Hillman & Sons — family owned and American made roofing.",
+    blurb: "Website for Hillman & Sons, family owned and American made roofing.",
     disciplines: ["Web design", "Development"],
     image: "/work/roofing-desktop.jpg",
     featured: true,
@@ -163,7 +163,7 @@ export const steps = [
   {
     index: "02",
     title: "We build your roadmap",
-    text: "You get a clear plan — scope, timeline, and a fixed quote. No jargon, no surprises.",
+    text: "You get a clear plan: scope, timeline, and a fixed quote. No jargon, no surprises.",
   },
   {
     index: "03",
@@ -193,7 +193,7 @@ export const whyUs = [
   },
   {
     title: "Clear advice, plain language",
-    text: "We'll tell you what you actually need — and what you don't. If a cheaper option does the job, we'll say so.",
+    text: "We'll tell you what you actually need, and what you don't. If a cheaper option does the job, we'll say so.",
   },
   {
     title: "Support beyond launch",
@@ -206,7 +206,7 @@ export type Faq = { q: string; a: string };
 export const faqs: Faq[] = [
   {
     q: "How much does a website cost?",
-    a: "It depends on what the site needs to do. Tell us about your project and we'll give you a clear, fixed quote before any work starts — no surprise fees, ever.",
+    a: "It depends on what the site needs to do. Tell us about your project and we'll give you a clear, fixed quote before any work starts. No surprise fees, ever.",
   },
   {
     q: "How long does a project take?",
@@ -218,15 +218,15 @@ export const faqs: Faq[] = [
   },
   {
     q: "Which platforms do you work with?",
-    a: "We build custom-coded sites, and we also work in Framer and Webflow when a platform is the right fit. We'll recommend the option that serves you best — not the one that's easiest for us.",
+    a: "We build custom-coded sites, and we also work in Framer and Webflow when a platform is the right fit. We'll recommend the option that serves you best, not the one that's easiest for us.",
   },
   {
     q: "Can you fix or improve my existing website?",
-    a: "Yes. We can audit what you have, fix what's broken, and redesign what isn't working — or rebuild from scratch if that's the smarter move. We'll tell you honestly which one it is.",
+    a: "Yes. We can audit what you have, fix what's broken, and redesign what isn't working, or rebuild from scratch if that's the smarter move. We'll tell you honestly which one it is.",
   },
   {
     q: "Do you help with IT, not just websites?",
-    a: "Absolutely — IT is half of what we do. From network setups and hardware deployment to ongoing support, we keep your technology dependable so you can focus on your business.",
+    a: "Absolutely. IT is half of what we do. From network setups and hardware deployment to ongoing support, we keep your technology dependable so you can focus on your business.",
   },
   {
     q: "What happens after launch?",

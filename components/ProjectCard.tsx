@@ -53,7 +53,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         <h3 className="font-display text-2xl font-bold tracking-tight">{project.name}</h3>
         <p className="mt-2 leading-relaxed text-muted">{project.blurb}</p>
         <p className="mt-3 font-mono text-xs tracking-[0.16em] text-muted uppercase">
-          {project.disciplines.join(" · ")} — {project.domain}
+          {project.disciplines.join(" · ")} · {project.domain}
         </p>
       </div>
     </a>

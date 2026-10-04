@@ -5,9 +5,9 @@ import SectionHeading from "@/components/SectionHeading";
 import { stats, whyUs } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "About ADiT — Business Technology Team in Los Angeles",
+  title: "About ADiT | Business Technology Team in Los Angeles",
   description:
-    "Meet Kiyo and Rafa — two Venezuelan professionals in Los Angeles combining 20+ years in marketing with 15+ years in technology, cybersecurity, and web.",
+    "Meet Kiyo and Rafa, two Venezuelan professionals in Los Angeles combining 20+ years in marketing with 15+ years in technology, cybersecurity, and web.",
   alternates: { canonical: "/about" },
 };
 
@@ -18,7 +18,7 @@ const values = [
   },
   {
     title: "Craft over shortcuts",
-    text: "Templates and quick fixes have their place — but your business deserves work that's built to last, not just to launch.",
+    text: "Templates and quick fixes have their place, but your business deserves work that's built to last, not just to launch.",
   },
   {
     title: "Technology should be boring",
@@ -51,19 +51,19 @@ export default function AboutPage() {
             <p>
               ADiT started with a simple observation: businesses were hiring one
               person for their website, another for their marketing, and a third
-              to keep their computers working — and none of them talked to each
+              to keep their computers working, and none of them talked to each
               other.
             </p>
             <p>
               So <strong className="font-bold">Kiyo</strong>, with 20+ years in
               marketing, and <strong className="font-bold">Rafa</strong>, with
-              15+ years in technology — networks, security, and the web —
+              15+ years in technology (networks, security, and the web)
               joined forces in Los Angeles to offer the whole picture from two
               desks.
             </p>
             <p>
               The result is a technology partner where your systems, your
-              website, and your marketing are handled together — by the same
+              website, and your marketing are handled together by the same
               two people who answer when you call.
             </p>
           </div>
@@ -82,7 +82,7 @@ export default function AboutPage() {
             ))}
           </dl>
           <p className="mt-4 text-sm text-muted">
-            Combined experience across both founders — never presented as 35 years each.
+            Combined experience across both founders, never presented as 35 years each.
           </p>
         </Reveal>
       </div>
@@ -96,11 +96,11 @@ export default function AboutPage() {
               <p className="font-display text-7xl font-bold text-signal">K</p>
               <h3 className="mt-8 font-display text-3xl font-bold uppercase">Kiyo</h3>
               <p className="mt-2 font-mono text-xs tracking-[0.18em] text-paper/60 uppercase">
-                Marketing & strategy — 20+ years
+                Marketing & strategy, 20+ years
               </p>
               <p className="mt-5 leading-relaxed text-paper/75">
                 Brand identity, strategy, content, and campaigns. Kiyo makes sure
-                the right people find you — and choose you.
+                the right people find you, and choose you.
               </p>
             </div>
           </Reveal>
@@ -109,15 +109,15 @@ export default function AboutPage() {
               <p className="font-display text-7xl font-bold">R</p>
               <h3 className="mt-8 font-display text-3xl font-bold uppercase">Rafa</h3>
               <p className="mt-2 font-mono text-xs tracking-[0.18em] uppercase opacity-70">
-                Web, development & IT — 15+ years
+                Web, development & IT, 15+ years
               </p>
               <p className="mt-5 leading-relaxed opacity-85">
-                Websites, custom development, and IT infrastructure — from a
+                Websites, custom development, and IT infrastructure, from a
                 homepage redesign to a full network overhaul. Rafa builds things
                 that work and keeps them working.
               </p>
               <p className="mt-5 border-t border-ink/15 pt-4 font-mono text-xs leading-relaxed tracking-[0.12em] uppercase opacity-70">
-                M.S. Information Technology (Cybersecurity) — California Lutheran
+                M.S. Information Technology (Cybersecurity), California Lutheran
                 University · Jamf Certified Associate – Jamf Pro · Google AI certified
               </p>
             </div>
@@ -138,16 +138,16 @@ export default function AboutPage() {
         <Reveal>
           <div className="mt-10 rounded-3xl bg-ink p-8 text-paper sm:p-12">
             <p className="font-mono text-xs tracking-[0.22em] text-signal uppercase">
-              Case file — IT incident response
+              Case file: IT incident response
             </p>
             <p className="mt-6 max-w-3xl font-display text-2xl font-bold leading-snug tracking-tight sm:text-3xl">
-              Ten Apple silicon MacBooks, dead on arrival — a fleet-wide boot
+              Ten Apple silicon MacBooks, dead on arrival: a fleet-wide boot
               failure that neither Apple nor Jamf engineering could reproduce.
             </p>
             <p className="mt-5 max-w-3xl leading-relaxed text-paper/70">
               Three weeks of digging isolated the culprit: a single
               configuration profile corrupting device boot policy. All ten units
-              recovered — zero hardware replaced.
+              recovered. Zero hardware replaced.
             </p>
             <div className="mt-8 grid grid-cols-3 gap-4 border-t border-paper/15 pt-8">
               {[

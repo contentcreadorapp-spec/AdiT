@@ -39,7 +39,7 @@ export default function Footer() {
               ADiT<span aria-hidden="true" className="text-ember">.</span>
             </p>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-[#f5f2e9]/60">
-              A business technology team run by Kiyo and Rafa — two Venezuelan
+              A business technology team run by Kiyo and Rafa, two Venezuelan
               professionals based in Los Angeles.
             </p>
           </div>
@@ -78,7 +78,7 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-white/15 pt-8">
           <p className="font-mono text-xs tracking-[0.14em] text-[#f5f2e9]/50 uppercase">
-            © 2026 ADiT — Los Angeles, CA
+            © 2026 ADiT · Los Angeles, CA
           </p>
           <div className="[&_button]:border-white/25 [&_button]:text-[#f5f2e9] [&_button:hover]:border-white/60">
             <ThemeToggle />
