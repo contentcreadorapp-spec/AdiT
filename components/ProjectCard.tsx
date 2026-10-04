@@ -24,7 +24,7 @@ export default function ProjectCard({ project }: { project: Project }) {
       className="group block"
       aria-label={`${project.name} — visit site (opens in a new tab)`}
     >
-      <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-ink/10 bg-ink/[0.04]">
+      <div className="relative aspect-[1280/666] overflow-hidden rounded-2xl border border-ink/10 bg-ink/[0.04]">
         {/* Honest typographic placeholder shown until (or if) the screenshot loads */}
         <div className="absolute inset-0 flex items-center justify-center p-8">
           <span className="text-center font-display text-3xl font-bold tracking-tight text-ink/15 uppercase sm:text-4xl">
