@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
@@ -92,34 +93,54 @@ export default function AboutPage() {
         <SectionHeading kicker="The team" title={<span id="team-heading">Small team. Big expertise.</span>} />
         <div className="mt-10 grid gap-5 md:grid-cols-2">
           <Reveal>
-            <div className="h-full rounded-3xl bg-ink p-8 text-paper sm:p-10">
-              <p className="font-display text-7xl font-bold text-signal">K</p>
-              <h3 className="mt-8 font-display text-3xl font-bold uppercase">Kiyo</h3>
-              <p className="mt-2 font-mono text-xs tracking-[0.18em] text-paper/60 uppercase">
-                Marketing & strategy, 20+ years
-              </p>
-              <p className="mt-5 leading-relaxed text-paper/75">
-                Brand identity, strategy, content, and campaigns. Kiyo makes sure
-                the right people find you, and choose you.
-              </p>
+            <div className="h-full overflow-hidden rounded-3xl bg-ink text-paper">
+              <div className="relative aspect-[4/5]">
+                <Image
+                  src="/team/kiyo.jpg"
+                  alt="Portrait of Kiyo"
+                  fill
+                  className="object-cover grayscale"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+              <div className="p-8 sm:p-10">
+                <h3 className="font-display text-3xl font-bold uppercase">Kiyo</h3>
+                <p className="mt-2 font-mono text-xs tracking-[0.18em] text-paper/60 uppercase">
+                  Marketing & strategy, 20+ years
+                </p>
+                <p className="mt-5 leading-relaxed text-paper/75">
+                  Brand identity, strategy, content, and campaigns. Kiyo makes sure
+                  the right people find you, and choose you.
+                </p>
+              </div>
             </div>
           </Reveal>
           <Reveal delay={100}>
-            <div className="h-full rounded-3xl bg-signal p-8 text-ink sm:p-10">
-              <p className="font-display text-7xl font-bold">R</p>
-              <h3 className="mt-8 font-display text-3xl font-bold uppercase">Rafa</h3>
-              <p className="mt-2 font-mono text-xs tracking-[0.18em] uppercase opacity-70">
-                Web, development & IT, 15+ years
-              </p>
-              <p className="mt-5 leading-relaxed opacity-85">
-                Websites, custom development, and IT infrastructure, from a
-                homepage redesign to a full network overhaul. Rafa builds things
-                that work and keeps them working.
-              </p>
-              <p className="mt-5 border-t border-ink/15 pt-4 font-mono text-xs leading-relaxed tracking-[0.12em] uppercase opacity-70">
-                M.S. Information Technology (Cybersecurity), California Lutheran
-                University · Jamf Certified Associate – Jamf Pro · Google AI certified
-              </p>
+            <div className="h-full overflow-hidden rounded-3xl bg-signal text-ink">
+              <div className="relative aspect-[4/5]">
+                <Image
+                  src="/team/rafa.jpg"
+                  alt="Portrait of Rafa"
+                  fill
+                  className="object-cover grayscale"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+              <div className="p-8 sm:p-10">
+                <h3 className="font-display text-3xl font-bold uppercase">Rafa</h3>
+                <p className="mt-2 font-mono text-xs tracking-[0.18em] uppercase opacity-70">
+                  Web, development & IT, 15+ years
+                </p>
+                <p className="mt-5 leading-relaxed opacity-85">
+                  Websites, custom development, and IT infrastructure, from a
+                  homepage redesign to a full network overhaul. Rafa builds things
+                  that work and keeps them working.
+                </p>
+                <p className="mt-5 border-t border-ink/15 pt-4 font-mono text-xs leading-relaxed tracking-[0.12em] uppercase opacity-70">
+                  M.S. Information Technology (Cybersecurity), California Lutheran
+                  University · Jamf Certified Associate – Jamf Pro · Google AI certified
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>
