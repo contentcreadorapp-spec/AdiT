@@ -17,15 +17,10 @@ export default function ContactForm() {
     const form = e.currentTarget;
     const data = Object.fromEntries(new FormData(form).entries());
 
-    // Formspree form IDs are public by design — the form posts straight
-    // to Formspree. Set NEXT_PUBLIC_FORMSPREE_FORM_ID to enable delivery.
-    const formId = process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID;
-    if (!formId) {
-      setStatus("not_configured");
-      return;
-    }
+    // Submissions go to /api/contact, which forwards them to a Google Sheet
+    // via a Google Apps Script web app (CONTACT_SHEET_WEBAPP_URL on the server).
     try {
-      const res = await fetch(`https://formspree.io/f/${formId}`, {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
@@ -38,6 +33,8 @@ export default function ContactForm() {
       if (res.ok) {
         setStatus("sent");
         form.reset();
+      } else if (res.status === 503) {
+        setStatus("not_configured");
       } else {
         setStatus("error");
       }
