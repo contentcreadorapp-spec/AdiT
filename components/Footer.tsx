@@ -39,7 +39,7 @@ export default function Footer() {
               ADiT<span aria-hidden="true" className="text-ember">.</span>
             </p>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-[#f5f2e9]/60">
-              A business technology team run by Kiyo and Rafa, two Venezuelan
+              A business technology team run by Kiyo and Rafa, two Venezuelan-American
               professionals based in Los Angeles.
             </p>
           </div>

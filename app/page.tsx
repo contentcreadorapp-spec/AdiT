@@ -250,7 +250,7 @@ export default function Home() {
             <div className="space-y-5 text-lg leading-relaxed">
               <p>
                 We&apos;re <strong className="font-bold">Kiyo</strong> and{" "}
-                <strong className="font-bold">Rafa</strong>, two Venezuelan
+                <strong className="font-bold">Rafa</strong>, two Venezuelan-American
                 professionals in Los Angeles who decided to stop working in
                 silos and start building things together.
               </p>
@@ -313,10 +313,7 @@ export default function Home() {
             {whyUs.map((w, i) => (
               <div key={w.title} className="bg-paper p-7 sm:p-9">
                 <Reveal delay={i * 70}>
-                  <p className="font-mono text-xs tracking-[0.2em] text-ember">
-                    0{i + 1}
-                  </p>
-                  <h3 className="mt-3 font-display text-2xl font-bold tracking-tight">
+                  <h3 className="font-display text-2xl font-bold tracking-tight">
                     {w.title}
                   </h3>
                   <p className="mt-3 leading-relaxed text-muted">{w.text}</p>

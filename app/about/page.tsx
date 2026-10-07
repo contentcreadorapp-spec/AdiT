@@ -7,7 +7,7 @@ import { stats, whyUs } from "@/content/site";
 export const metadata: Metadata = {
   title: "About ADiT | Business Technology Team in Los Angeles",
   description:
-    "Meet Kiyo and Rafa, two Venezuelan professionals in Los Angeles combining 20+ years in marketing with 15+ years in technology, cybersecurity, and web.",
+    "Meet Kiyo and Rafa, two Venezuelan-American professionals in Los Angeles combining 20+ years in marketing with 15+ years in technology, cybersecurity, and web.",
   alternates: { canonical: "/about" },
 };
 
@@ -38,7 +38,7 @@ export default function AboutPage() {
         kicker="About ADiT"
         title={
           <>
-            Two Venezuelans.
+            Two Venezuelan-Americans.
             <br />
             One tech team in LA.
           </>
