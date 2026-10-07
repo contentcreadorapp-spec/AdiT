@@ -4,6 +4,16 @@ import { NextResponse } from "next/server";
 // web app. The script URL is server-side only, so it never ships to the
 // browser. Set CONTACT_SHEET_WEBAPP_URL in Vercel (the /exec URL from
 // Apps Script > Deploy > Web app) and redeploy.
+// Lightweight status check: reports whether server-side delivery is configured.
+// (No sheet writes; safe to visit any time.)
+export async function GET() {
+  return NextResponse.json({
+    contactDelivery: process.env.CONTACT_SHEET_WEBAPP_URL
+      ? "configured"
+      : "missing",
+  });
+}
+
 export async function POST(req: Request) {
   const webappUrl = process.env.CONTACT_SHEET_WEBAPP_URL;
   if (!webappUrl) {
@@ -30,6 +40,11 @@ export async function POST(req: Request) {
   }
 
   try {
+    // Google Apps Script web apps answer a POST with a 302 redirect to
+    // script.googleusercontent.com carrying the script's output. A default
+    // fetch follows that redirect as a GET, which mangles the response even
+    // though the row was already appended. So the redirect is inspected
+    // manually: a redirect to googleusercontent means the script ran.
     // text/plain avoids a CORS preflight; Apps Script parses postData.contents.
     const res = await fetch(webappUrl, {
       method: "POST",
@@ -40,8 +55,14 @@ export async function POST(req: Request) {
         projectType: String(data.projectType ?? "Not specified"),
         message,
       }),
+      redirect: "manual",
     });
-    if (!res.ok) throw new Error(`sheet web app responded ${res.status}`);
+    const location = res.headers.get("location") || "";
+    const delivered =
+      res.ok ||
+      ((res.status === 301 || res.status === 302 || res.status === 303) &&
+        location.includes("googleusercontent.com"));
+    if (!delivered) throw new Error(`sheet web app responded ${res.status}`);
     return NextResponse.json({ ok: true });
   } catch (err) {
     console.error("Contact sheet forward failed:", err);
