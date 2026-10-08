@@ -105,6 +105,14 @@ export default function AboutPage() {
                 <p className="mt-5 leading-relaxed text-paper/75">
                   20+ years making brands impossible to ignore.
                 </p>
+                <a
+                  href="https://www.linkedin.com/in/kiyomiv/"
+                  target="_blank"
+                  rel="noopener"
+                  className="mt-5 inline-block font-mono text-xs tracking-[0.18em] text-paper/70 uppercase underline underline-offset-4 transition-colors hover:text-signal"
+                >
+                  LinkedIn
+                </a>
               </div>
             </div>
           </Reveal>
@@ -131,6 +139,14 @@ export default function AboutPage() {
                   M.S. Information Technology (Cybersecurity), California Lutheran
                   University · Jamf Certified Associate – Jamf Pro · Google AI certified
                 </p>
+                <a
+                  href="https://www.linkedin.com/in/rafael-cordero"
+                  target="_blank"
+                  rel="noopener"
+                  className="mt-5 inline-block font-mono text-xs tracking-[0.18em] uppercase underline underline-offset-4 opacity-70 transition-opacity hover:opacity-100"
+                >
+                  LinkedIn
+                </a>
               </div>
             </div>
           </Reveal>
