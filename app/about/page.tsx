@@ -6,9 +6,9 @@ import SectionHeading from "@/components/SectionHeading";
 import { stats, whyUs } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "About ADiT | Business Technology Team in Los Angeles",
+  title: "Latino-Owned IT & Marketing Agency in Los Angeles",
   description:
-    "Meet Kiyo and Rafa, two Venezuelan-American professionals in Los Angeles combining 20+ years in marketing with 15+ years in technology, cybersecurity, and web.",
+    "Meet Rafael Cordero and Kiyomi Villasana, two Venezuelan-American professionals in Los Angeles combining 20+ years in marketing with 15+ years in technology, cybersecurity, and web.",
   alternates: { canonical: "/about" },
 };
 
@@ -37,35 +37,29 @@ export default function AboutPage() {
       <SectionHeading
         level={1}
         kicker="About ADiT"
-        title={
-          <>
-            Two Venezuelan-Americans.
-            <br />
-            One tech team in LA.
-          </>
-        }
+        title="Latino-owned IT & marketing agency in Los Angeles."
+        lede="Two Venezuelan-American professionals in Los Angeles. One team for your technology and your marketing."
       />
 
       <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:gap-16">
         <Reveal>
           <div className="space-y-5 text-lg leading-relaxed">
             <p>
-              ADiT started with a simple observation: businesses were hiring one
-              person for their website, another for their marketing, and a third
-              to keep their computers working, and none of them talked to each
-              other.
+              We&apos;re <strong className="font-bold">Rafael Cordero</strong> and{" "}
+              <strong className="font-bold">Kiyomi Villasana</strong>, Venezuelan-American
+              professionals in Los Angeles. We spent years watching tech teams and
+              marketing teams blame each other, so we built an agency where that
+              can&apos;t happen.
             </p>
             <p>
-              So <strong className="font-bold">Kiyo</strong>, with 20+ years in
-              marketing, and <strong className="font-bold">Rafa</strong>, with
-              15+ years in technology (networks, security, and the web)
-              joined forces in Los Angeles to offer the whole picture from two
-              desks.
+              Rafael brings 15+ years in web, IT and cybersecurity: the systems
+              and websites that keep your business running when it counts. Kiyomi
+              brings 20+ years in marketing: brand, strategy and campaigns that
+              get businesses chosen.
             </p>
             <p>
-              The result is a technology partner where your systems, your
-              website, and your marketing are handled together by the same
-              two people who answer when you call.
+              Together we help Los Angeles businesses stay secure and grow, in
+              English and Spanish, with one team accountable for the whole picture.
             </p>
           </div>
         </Reveal>
@@ -97,20 +91,19 @@ export default function AboutPage() {
               <div className="relative aspect-[4/5]">
                 <Image
                   src="/team/kiyo.jpg"
-                  alt="Portrait of Kiyo"
+                  alt="Portrait of Kiyomi Villasana"
                   fill
                   className="object-cover grayscale"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
               <div className="p-8 sm:p-10">
-                <h3 className="font-display text-3xl font-bold uppercase">Kiyo</h3>
+                <h3 className="font-display text-3xl font-bold uppercase">Kiyomi Villasana</h3>
                 <p className="mt-2 font-mono text-xs tracking-[0.18em] text-paper/60 uppercase">
-                  Marketing & strategy, 20+ years
+                  Co-founder, Marketing & Strategy
                 </p>
                 <p className="mt-5 leading-relaxed text-paper/75">
-                  Brand identity, strategy, content, and campaigns. Kiyo makes sure
-                  the right people find you, and choose you.
+                  20+ years making brands impossible to ignore.
                 </p>
               </div>
             </div>
@@ -120,21 +113,19 @@ export default function AboutPage() {
               <div className="relative aspect-[4/5]">
                 <Image
                   src="/team/rafa.jpg"
-                  alt="Portrait of Rafa"
+                  alt="Portrait of Rafael Cordero"
                   fill
                   className="object-cover grayscale"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
               <div className="p-8 sm:p-10">
-                <h3 className="font-display text-3xl font-bold uppercase">Rafa</h3>
+                <h3 className="font-display text-3xl font-bold uppercase">Rafael Cordero</h3>
                 <p className="mt-2 font-mono text-xs tracking-[0.18em] uppercase opacity-70">
-                  Web, development & IT, 15+ years
+                  Co-founder, Technology & IT
                 </p>
                 <p className="mt-5 leading-relaxed opacity-85">
-                  Websites, custom development, and IT infrastructure, from a
-                  homepage redesign to a full network overhaul. Rafa builds things
-                  that work and keeps them working.
+                  15+ years building websites and keeping technology dependable.
                 </p>
                 <p className="mt-5 border-t border-ink/15 pt-4 font-mono text-xs leading-relaxed tracking-[0.12em] uppercase opacity-70">
                   M.S. Information Technology (Cybersecurity), California Lutheran

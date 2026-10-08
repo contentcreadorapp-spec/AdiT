@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { faqs } from "@/content/site";
+import { faqs as defaultFaqs, type Faq as FaqType } from "@/content/site";
 
-export default function Faq() {
+export default function Faq({ faqs = defaultFaqs }: { faqs?: FaqType[] }) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (

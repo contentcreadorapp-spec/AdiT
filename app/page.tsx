@@ -7,13 +7,13 @@ import ProjectCard from "@/components/ProjectCard";
 import Faq from "@/components/Faq";
 import JsonLd from "@/components/JsonLd";
 import SplitReveal from "@/components/SplitReveal";
-import { projects, services, stats, steps, whyUs, faqs, siteUrl } from "@/content/site";
+import { projects, pillars, stats, steps, whyUs, faqs, siteUrl } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "ADiT | Business Technology in Los Angeles",
-  description:
-    "ADiT is a business technology team in Los Angeles. IT infrastructure, cybersecurity, web development, web design, and marketing, handled by Kiyo and Rafa, two people you'll actually talk to.",
-  alternates: { canonical: "/" },
+  alternates: {
+    canonical: "/",
+    languages: { es: "/es", "x-default": "/" },
+  },
 };
 
 const featured = projects.filter((p) => p.featured);
@@ -21,26 +21,23 @@ const featured = projects.filter((p) => p.featured);
 export default function Home() {
   const businessSchema = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": "LocalBusiness",
     name: "ADiT",
     description:
-      "Business technology team in Los Angeles: IT infrastructure, cybersecurity, web development, web design, and marketing, run by Kiyo and Rafa.",
+      "Los Angeles IT services and marketing agency for small businesses: IT support, cybersecurity, web design, digital marketing and SEO.",
     url: `${siteUrl}/`,
     areaServed: { "@type": "City", name: "Los Angeles, CA" },
     founder: [
-      { "@type": "Person", name: "Kiyo", jobTitle: "Marketing & Strategy" },
-      {
-        "@type": "Person",
-        name: "Rafael T. Cordero",
-        jobTitle: "Web, Development & IT",
-      },
+      { "@type": "Person", name: "Rafael Cordero", jobTitle: "Technology & IT" },
+      { "@type": "Person", name: "Kiyomi Villasana", jobTitle: "Marketing & Strategy" },
     ],
     knowsAbout: [
-      "Web Design",
-      "Web Development",
       "IT Services",
       "Cybersecurity",
-      "Marketing",
+      "Web Design",
+      "Web Development",
+      "Digital Marketing",
+      "SEO",
     ],
   };
   const faqSchema = {
@@ -58,34 +55,38 @@ export default function Home() {
       {/* ── Hero ─────────────────────────────────────────── */}
       <section className="mx-auto max-w-7xl px-4 pt-14 pb-16 sm:px-6 sm:pt-20 sm:pb-20">
         <Reveal>
-          <p className="mt-6 text-xl text-muted sm:text-2xl">
-            Your business runs on technology.
-          </p>
-          <h1 className="mt-4 font-display text-[clamp(2.9rem,9.5vw,8rem)] leading-[0.94] font-bold tracking-tight text-balance uppercase">
-            <SplitReveal text="Technology that" />
+          <h1 className="mt-6 font-mono text-xs tracking-[0.22em] text-muted uppercase sm:text-sm">
+            IT Services & Marketing Agency in Los Angeles
+          </h1>
+          <h2 className="mt-4 font-display text-[clamp(2.9rem,9.5vw,8rem)] leading-[0.94] font-bold tracking-tight text-balance uppercase">
+            <SplitReveal text="Technology that keeps your business running." />
             <br />
             <span className="bg-signal px-2 text-ink box-decoration-clone">
-              <SplitReveal text="actually works." stagger={30} />
+              <SplitReveal text="Marketing that grows it." stagger={30} />
             </span>
-          </h1>
+          </h2>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">
-            IT infrastructure, cybersecurity, web development, and design,
-            handled by two people you&apos;ll actually talk to.
+            IT support, cybersecurity, web design, digital marketing and SEO for
+            Los Angeles businesses, from one bilingual team. You work directly
+            with Rafael Cordero and Kiyomi Villasana, the two people doing the work.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
-              href="/work"
+              href="/contact"
               className="inline-flex min-h-14 items-center rounded-full bg-ink px-8 py-4 font-display text-base font-bold tracking-tight text-paper uppercase transition-transform hover:scale-[1.03]"
+            >
+              Book a free consultation
+            </Link>
+            <Link
+              href="/work"
+              className="inline-flex min-h-14 items-center rounded-full border-2 border-ink px-8 py-4 font-display text-base font-bold tracking-tight uppercase transition-colors hover:bg-ink hover:text-paper"
             >
               See our work
             </Link>
-            <Link
-              href="/contact"
-              className="inline-flex min-h-14 items-center rounded-full border-2 border-ink px-8 py-4 font-display text-base font-bold tracking-tight uppercase transition-colors hover:bg-ink hover:text-paper"
-            >
-              Discuss a project
-            </Link>
           </div>
+          <p className="mt-6 font-mono text-xs tracking-[0.18em] text-muted uppercase">
+            Fixed quotes. Plain language. Hablamos español.
+          </p>
         </Reveal>
 
         <Reveal delay={120}>
@@ -118,7 +119,7 @@ export default function Home() {
                 not promises.
               </>
             }
-            lede="Real sites for real businesses. Every one designed, built, and launched by the two of us."
+            lede="Real businesses, real launches. Every project strategized, designed and built by the two of us."
           />
           <Reveal>
             <Link
@@ -138,46 +139,50 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── What we do ───────────────────────────────────── */}
+      {/* ── What we do: two pillars ──────────────────────── */}
       <section className="border-y border-ink/10 bg-ink/[0.025]">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
           <SectionHeading
             kicker="What we do"
-            title="Four disciplines. One team."
-            lede="Most vendors hand you off between departments. With us, the people securing your network are the same people building your site."
+            title="Two pillars. One team."
+            lede="Most Los Angeles businesses juggle an IT company, a web developer and a marketing agency, and none of them talk to each other. With ADiT, the people securing your systems are the same people building your website and running your campaigns."
           />
-          <div className="mt-12 grid gap-5 md:grid-cols-2">
-            {services.map((s, i) => (
-              <Reveal key={s.id} delay={i * 80}>
+          <div className="mt-12 grid gap-5 lg:grid-cols-2">
+            {pillars.map((pillar, i) => (
+              <Reveal key={pillar.id} delay={i * 80}>
                 <Link
-                  href={`/services#${s.id}`}
-                  className="group flex h-full flex-col rounded-2xl border border-ink/10 bg-paper p-7 transition-all hover:-translate-y-1 hover:shadow-[0_20px_50px_-20px_rgba(20,22,15,0.35)] sm:p-9"
+                  href={pillar.href}
+                  className="group flex h-full flex-col rounded-3xl border border-ink/10 bg-paper p-7 transition-all hover:-translate-y-1 hover:shadow-[0_20px_50px_-20px_rgba(20,22,15,0.35)] sm:p-10"
                 >
-                  <div className="flex items-baseline justify-end">
-                    <span
-                      aria-hidden="true"
-                      className="font-display text-xl transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
-                    >
-                      ↗
-                    </span>
-                  </div>
-                  <h3 className="mt-4 font-display text-3xl font-bold tracking-tight uppercase">
-                    {s.name}
-                  </h3>
-                  <p className="mt-2 font-display text-lg font-bold text-ember">
-                    {s.tagline}
+                  <p className="font-mono text-xs tracking-[0.22em] text-ember uppercase">
+                    {pillar.label} · led by {pillar.lead}
                   </p>
-                  <p className="mt-4 leading-relaxed text-muted">{s.description}</p>
-                  <ul className="mt-6 flex flex-wrap gap-2">
-                    {s.items.slice(0, 4).map((item) => (
-                      <li
-                        key={item}
-                        className="rounded-full border border-ink/15 px-3.5 py-1.5 font-mono text-[11px] tracking-[0.08em] uppercase"
-                      >
-                        {item}
-                      </li>
+                  <p className="mt-4 font-display text-2xl font-bold tracking-tight sm:text-3xl">
+                    {pillar.tagline}
+                  </p>
+                  <div className="mt-8 space-y-8">
+                    {pillar.groups.map((g) => (
+                      <div key={g.name}>
+                        <h3 className="font-display text-xl font-bold tracking-tight">
+                          {g.name}
+                        </h3>
+                        <p className="mt-2 leading-relaxed text-muted">{g.description}</p>
+                        <ul className="mt-4 flex flex-wrap gap-2">
+                          {g.items.map((item) => (
+                            <li
+                              key={item}
+                              className="rounded-full border border-ink/15 px-3.5 py-1.5 font-mono text-[11px] tracking-[0.08em] uppercase"
+                            >
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
+                  <span className="mt-8 inline-flex items-center gap-2 font-mono text-xs tracking-[0.18em] uppercase underline decoration-ember decoration-2 underline-offset-8 group-hover:text-ember">
+                    Explore {pillar.label} <span aria-hidden="true">→</span>
+                  </span>
                 </Link>
               </Reveal>
             ))}
@@ -185,52 +190,73 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── From the field: Malibu infrastructure ─────────── */}
-      <section
-        aria-labelledby="field-malibu-heading"
-        className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24"
-      >
+      {/* ── From the field: two case files ────────────────── */}
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
         <SectionHeading
           kicker="From the field"
-          title={
-            <span id="field-malibu-heading">
-              When the internet kept failing in Malibu.
-            </span>
-          }
+          title="Case files."
+          lede="One story from each pillar. Technology first."
         />
-        <Reveal>
-          <div className="mt-10 rounded-3xl bg-ink p-8 text-paper sm:p-12">
-            <p className="font-mono text-xs tracking-[0.22em] text-signal uppercase">
-              Case file: network infrastructure
-            </p>
-            <p className="mt-6 max-w-3xl font-display text-2xl font-bold leading-snug tracking-tight sm:text-3xl">
-              Repeated ISP outages left a Malibu home with no reliable
-              connection. So we stopped depending on one.
-            </p>
-            <p className="mt-5 max-w-3xl leading-relaxed text-paper/70">
-              Rafa rebuilt the whole-home network from the ground up: Starlink
-              for the internet connection, UniFi hardware carrying it to every
-              corner of the house. This is the unglamorous infrastructure work
-              most web shops never touch. It is half of what ADiT is.
-            </p>
-            <div className="mt-8 grid grid-cols-3 gap-4 border-t border-paper/15 pt-8">
-              {[
-                ["Starlink", "for the connection"],
-                ["UniFi", "for the network"],
-                ["Whole home", "rebuilt end to end"],
-              ].map(([value, label]) => (
-                <div key={label}>
-                  <p className="font-display text-3xl font-bold tracking-tight text-signal sm:text-4xl">
-                    {value}
-                  </p>
-                  <p className="mt-1 font-mono text-xs tracking-[0.14em] text-paper/60 uppercase">
-                    {label}
-                  </p>
-                </div>
-              ))}
+        <div className="mt-10 grid gap-5 lg:grid-cols-2">
+          <Reveal>
+            <div className="flex h-full flex-col rounded-3xl bg-ink p-8 text-paper sm:p-12">
+              <p className="font-mono text-xs tracking-[0.22em] text-signal uppercase">
+                Case file: infrastructure
+              </p>
+              <h3 className="mt-6 font-display text-2xl font-bold leading-snug tracking-tight sm:text-3xl">
+                When &ldquo;the internet&rsquo;s down&rdquo; isn&rsquo;t an option.
+              </h3>
+              <p className="mt-5 leading-relaxed text-paper/70">
+                A Malibu property kept losing its connection to repeated ISP
+                outages. Instead of waiting on the provider, Rafael Cordero
+                removed the single point of failure: Starlink for the connection
+                and UniFi hardware carrying it to every corner, rebuilt end to end.
+              </p>
+              <p className="mt-4 leading-relaxed text-paper/70">
+                It&rsquo;s the same thinking we bring to every client. If your
+                website, booking system or ad campaign depends on something
+                fragile, we find it and fix it before it costs you customers.
+              </p>
+              <div className="mt-8 grid grid-cols-3 gap-4 border-t border-paper/15 pt-8">
+                {[
+                  ["Starlink", "the connection"],
+                  ["UniFi", "the network"],
+                  ["0", "single points of failure"],
+                ].map(([value, label]) => (
+                  <div key={label}>
+                    <p className="font-display text-3xl font-bold tracking-tight text-signal sm:text-4xl">
+                      {value}
+                    </p>
+                    <p className="mt-1 font-mono text-xs tracking-[0.14em] text-paper/60 uppercase">
+                      {label}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        </Reveal>
+          </Reveal>
+          <Reveal delay={100}>
+            <div className="flex h-full flex-col rounded-3xl bg-ink p-8 text-paper sm:p-12">
+              <p className="font-mono text-xs tracking-[0.22em] text-signal uppercase">
+                Case file: local marketing
+              </p>
+              <h3 className="mt-6 font-display text-2xl font-bold leading-snug tracking-tight sm:text-3xl">
+                How a Venezuelan café got found in Los Angeles.
+              </h3>
+              <p className="mt-5 leading-relaxed text-paper/70">
+                Kiyomi Villasana built Guarapo Caffé&rsquo;s brand voice,
+                Instagram presence and Google Business Profile while Rafael
+                built the site: the story, the menu and the address, impossible
+                to miss, everywhere a hungry neighbor might look.
+              </p>
+              <p className="mt-4 leading-relaxed text-paper/70">
+                It&rsquo;s the same thinking we bring to every client. Get the
+                brand straight, show up where people search, and make choosing
+                you the easy part.
+              </p>
+            </div>
+          </Reveal>
+        </div>
       </section>
 
       {/* ── Who we are ───────────────────────────────────── */}
@@ -241,7 +267,7 @@ export default function Home() {
             <>
               Two experts.
               <br />
-              One integrated solution.
+              One team. Zero handoffs.
             </>
           }
         />
@@ -249,21 +275,21 @@ export default function Home() {
           <Reveal>
             <div className="space-y-5 text-lg leading-relaxed">
               <p>
-                We&apos;re <strong className="font-bold">Kiyo</strong> and{" "}
-                <strong className="font-bold">Rafa</strong>, two Venezuelan-American
-                professionals in Los Angeles who decided to stop working in
-                silos and start building things together.
+                We&rsquo;re <strong className="font-bold">Rafael Cordero</strong> and{" "}
+                <strong className="font-bold">Kiyomi Villasana</strong>, Venezuelan-American
+                professionals in Los Angeles. We spent years watching tech teams and
+                marketing teams blame each other, so we built an agency where that
+                can&rsquo;t happen.
               </p>
               <p>
-                Kiyo brings 20+ years in marketing: brand, strategy, and
-                campaigns that get businesses chosen. Rafa brings 15+ years in
-                web and IT: sites, infrastructure, and the unglamorous work that
-                keeps everything running.
+                Rafael brings 15+ years in web, IT and cybersecurity: the systems
+                and websites that keep your business running when it counts. Kiyomi
+                brings 20+ years in marketing: brand, strategy and campaigns that
+                get businesses chosen.
               </p>
               <p>
-                Combined, that&apos;s 35+ years of experience pointed at one
-                goal: helping businesses show up online with better websites,
-                smart marketing, and dependable technology.
+                Together we help Los Angeles businesses stay secure and grow, in
+                English and Spanish, with one team accountable for the whole picture.
               </p>
             </div>
             <Link
@@ -277,9 +303,9 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-5">
               <div className="rounded-2xl bg-ink p-8 text-paper">
                 <p className="font-display text-6xl font-bold text-signal">K</p>
-                <p className="mt-6 font-display text-xl font-bold uppercase">Kiyo</p>
+                <p className="mt-6 font-display text-xl font-bold uppercase">Kiyomi Villasana</p>
                 <p className="mt-2 font-mono text-xs tracking-[0.16em] text-paper/60 uppercase">
-                  Marketing & strategy
+                  Co-founder, Marketing & Strategy
                 </p>
                 <p className="mt-4 text-sm leading-relaxed text-paper/70">
                   20+ years making brands impossible to ignore.
@@ -287,13 +313,13 @@ export default function Home() {
               </div>
               <div className="rounded-2xl bg-signal p-8 text-ink">
                 <p className="font-display text-6xl font-bold">R</p>
-                <p className="mt-6 font-display text-xl font-bold uppercase">Rafa</p>
+                <p className="mt-6 font-display text-xl font-bold uppercase">Rafael Cordero</p>
                 <p className="mt-2 font-mono text-xs tracking-[0.16em] uppercase opacity-70">
-                  Web, development & IT
+                  Co-founder, Technology & IT
                 </p>
                 <p className="mt-4 text-sm leading-relaxed opacity-80">
-                  15+ years building sites and keeping tech dependable. M.S. in
-                  Information Technology (Cybersecurity), California Lutheran University.
+                  15+ years building websites and keeping technology dependable.
+                  M.S. in Information Technology (Cybersecurity), California Lutheran University.
                 </p>
               </div>
             </div>
@@ -301,13 +327,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Why choose us ────────────────────────────────── */}
+      {/* ── Why ADiT ─────────────────────────────────────── */}
       <section className="border-y border-ink/10 bg-ink/[0.025]">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
           <SectionHeading
             kicker="Why ADiT"
             title="Small on purpose."
-            lede="We're not an agency with layers. Here's what that gets you."
+            lede="No layers, no account managers, no runaround. Here's what that gets you."
           />
           <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-ink/10 bg-ink/10 sm:grid-cols-2">
             {whyUs.map((w, i) => (
@@ -335,7 +361,7 @@ export default function Home() {
               Zero guesswork.
             </>
           }
-          lede="One consistent process, from first call to long after launch. You'll always know what's happening and what comes next."
+          lede="One clear process from the first call to long after launch. You always know what's happening and what's next."
         />
         <ol className="mt-12">
           {steps.map((step, i) => (
@@ -381,23 +407,6 @@ export default function Home() {
               <Faq />
             </Reveal>
           </div>
-        </div>
-      </section>
-
-      {/* ── Contact band ─────────────────────────────────── */}
-      <section className="bg-signal text-ink">
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
-          <Reveal className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
-            <h2 className="max-w-3xl font-display text-4xl font-bold tracking-tight text-balance uppercase sm:text-5xl lg:text-6xl">
-              Have something to build, fix, or grow?
-            </h2>
-            <Link
-              href="/contact"
-              className="inline-flex min-h-14 shrink-0 items-center rounded-full bg-ink px-8 py-4 font-display text-base font-bold tracking-tight text-paper uppercase transition-transform hover:scale-[1.03]"
-            >
-              Discuss a project
-            </Link>
-          </Reveal>
         </div>
       </section>
     </>

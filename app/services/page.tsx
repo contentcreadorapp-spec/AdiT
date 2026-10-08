@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
-import { services } from "@/content/site";
+import { pillars } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "Services | IT, Cybersecurity, Web Development & Design in Los Angeles",
+  title: "IT & Marketing Services",
   description:
-    "Four disciplines, one team: IT infrastructure and cybersecurity, web development, web design, and marketing. See what ADiT in Los Angeles can do for your business.",
+    "ADiT services in Los Angeles: IT support, cybersecurity, web design and development, plus digital marketing, SEO and branding. Two pillars, one team.",
   alternates: { canonical: "/services" },
 };
 
@@ -19,53 +19,42 @@ export default function ServicesPage() {
         kicker="Services"
         title={
           <>
-            Everything a business
+            Two pillars.
             <br />
-            needs to show up online.
+            One team.
           </>
         }
-        lede="Four disciplines that usually live in separate companies. Here they sit at the same table, which means your tech, your website, and your marketing actually work together."
+        lede="Technology and marketing usually live in separate companies. Here they sit at the same table, which means your tech, your website, and your marketing actually work together."
       />
 
-      <div className="mt-14 space-y-6">
-        {services.map((s, i) => (
-          <Reveal key={s.id} delay={Math.min(i * 60, 180)}>
-            <section
-              id={s.id}
-              aria-labelledby={`${s.id}-heading`}
-              className="scroll-mt-32 rounded-3xl border border-ink/10 bg-ink/[0.025] p-7 sm:p-10 lg:p-12"
+      <div className="mt-14 grid gap-5 md:grid-cols-2">
+        {pillars.map((pillar, i) => (
+          <Reveal key={pillar.id} delay={i * 80}>
+            <Link
+              href={pillar.href}
+              className="group flex h-full flex-col rounded-3xl border border-ink/10 bg-ink/[0.025] p-8 transition-all hover:-translate-y-1 hover:shadow-[0_20px_50px_-20px_rgba(20,22,15,0.35)] sm:p-12"
             >
               <p className="font-mono text-xs tracking-[0.22em] text-ember uppercase">
-                {s.tagline}
+                {pillar.label} · led by {pillar.lead}
               </p>
-              <h2
-                id={`${s.id}-heading`}
-                className="mt-4 font-display text-4xl font-bold tracking-tight uppercase sm:text-5xl"
-              >
-                {s.name}
+              <h2 className="mt-4 font-display text-4xl font-bold tracking-tight uppercase sm:text-5xl">
+                {pillar.label}
               </h2>
-              <p className="mt-5 max-w-3xl text-lg leading-relaxed text-muted">
-                {s.description}
-              </p>
-              <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                {s.items.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-center gap-3 rounded-xl border border-ink/10 bg-paper px-5 py-4"
-                  >
+              <p className="mt-4 font-display text-xl font-bold">{pillar.tagline}</p>
+              <ul className="mt-6 space-y-2.5 text-muted">
+                {pillar.groups.map((g) => (
+                  <li key={g.name} className="flex items-center gap-3">
                     <span aria-hidden="true" className="font-display font-bold text-ember">
                       →
                     </span>
-                    <span className="font-medium">{item}</span>
+                    {g.name}
                   </li>
                 ))}
               </ul>
-              {s.note && (
-                <p className="mt-6 border-l-4 border-signal pl-4 text-sm leading-relaxed text-muted">
-                  {s.note}
-                </p>
-              )}
-            </section>
+              <span className="mt-8 inline-flex items-center gap-2 font-mono text-xs tracking-[0.18em] uppercase underline decoration-ember decoration-2 underline-offset-8 group-hover:text-ember">
+                Explore {pillar.label} <span aria-hidden="true">→</span>
+              </span>
+            </Link>
           </Reveal>
         ))}
       </div>
@@ -77,7 +66,7 @@ export default function ServicesPage() {
               Not sure which one you need?
             </h2>
             <p className="mt-3 max-w-xl leading-relaxed text-paper/70">
-              Most projects touch more than one discipline. Tell us what&apos;s going on
+              Most projects touch both pillars. Tell us what&apos;s going on
               and we&apos;ll point you at the right starting place, honestly.
             </p>
           </div>
@@ -85,7 +74,7 @@ export default function ServicesPage() {
             href="/contact"
             className="inline-flex min-h-14 shrink-0 items-center rounded-full bg-signal px-8 py-4 font-display text-base font-bold tracking-tight text-ink uppercase transition-transform hover:scale-[1.03]"
           >
-            Ask us
+            Book a free consultation
           </Link>
         </div>
       </Reveal>

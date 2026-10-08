@@ -23,7 +23,7 @@ export async function POST(req: Request) {
   let data: {
     name?: unknown;
     email?: unknown;
-    projectType?: unknown;
+    business?: unknown;
     message?: unknown;
   };
   try {
@@ -34,6 +34,7 @@ export async function POST(req: Request) {
 
   const name = String(data.name ?? "").trim();
   const email = String(data.email ?? "").trim();
+  const business = String(data.business ?? "").trim();
   const message = String(data.message ?? "").trim();
   if (!name || !email || !message) {
     return NextResponse.json({ error: "invalid" }, { status: 400 });
@@ -52,7 +53,7 @@ export async function POST(req: Request) {
       body: JSON.stringify({
         name,
         email,
-        projectType: String(data.projectType ?? "Not specified"),
+        business,
         message,
       }),
       redirect: "manual",

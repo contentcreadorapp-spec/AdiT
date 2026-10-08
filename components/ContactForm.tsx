@@ -26,7 +26,7 @@ export default function ContactForm() {
         body: JSON.stringify({
           name: String(data.name ?? ""),
           email: String(data.email ?? ""),
-          projectType: String(data.type ?? "Not specified"),
+          business: String(data.business ?? ""),
           message: String(data.message ?? ""),
         }),
       });
@@ -50,8 +50,8 @@ export default function ContactForm() {
           Message received.
         </p>
         <p className="mt-3 leading-relaxed text-muted">
-          Thanks for reaching out. We read every message ourselves and we&apos;ll
-          get back to you shortly.
+          Thanks for reaching out. We&apos;ll reply within one business day with
+          honest next steps.
         </p>
       </div>
     );
@@ -74,27 +74,21 @@ export default function ContactForm() {
         </div>
       </div>
       <div>
-        <label htmlFor="contact-type" className="mb-2 block font-mono text-xs tracking-[0.18em] uppercase">
-          What do you need?
+        <label htmlFor="contact-business" className="mb-2 block font-mono text-xs tracking-[0.18em] uppercase">
+          Business
         </label>
-        <select id="contact-type" name="type" defaultValue="A new website" className={inputClass}>
-          <option>A new website</option>
-          <option>Redesign / fix my site</option>
-          <option>IT infrastructure / support</option>
-          <option>Marketing</option>
-          <option>Something else</option>
-        </select>
+        <input id="contact-business" name="business" type="text" required autoComplete="organization" placeholder="Your business name" className={inputClass} />
       </div>
       <div>
         <label htmlFor="contact-message" className="mb-2 block font-mono text-xs tracking-[0.18em] uppercase">
-          Tell us about it
+          What do you want to fix or grow?
         </label>
         <textarea
           id="contact-message"
           name="message"
           required
           rows={5}
-          placeholder="What does your business do, and what are you hoping for?"
+          placeholder="Tell us about your tech setup, your marketing, or both."
           className={`${inputClass} resize-y`}
         />
       </div>
@@ -116,7 +110,7 @@ export default function ContactForm() {
         disabled={status === "sending"}
         className="inline-flex min-h-14 w-full items-center justify-center rounded-full bg-ink px-8 py-4 font-display text-base font-bold tracking-tight text-paper uppercase transition-transform hover:scale-[1.02] disabled:opacity-60 sm:w-auto"
       >
-        {status === "sending" ? "Sending…" : "Send message"}
+        {status === "sending" ? "Sending…" : "Book a free consultation"}
       </button>
       <p className="font-mono text-xs tracking-[0.14em] text-muted uppercase">
         No spam, no newsletters, just a reply from a human.

@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import ContactForm from "@/components/ContactForm";
+import InstagramLink from "@/components/InstagramLink";
 
 export const metadata: Metadata = {
-  title: "Contact ADiT | Start Your Technology Project in Los Angeles",
+  title: "Free IT Consultation Los Angeles",
   description:
-    "Start a project with ADiT: IT infrastructure, cybersecurity, web development, web design, or marketing. Tell us what's going on. A real person replies.",
+    "Book a free consultation with ADiT in Los Angeles: a 20-minute call covering your tech setup and your marketing. Website quotes and marketing consultations. Hablamos español.",
   alternates: { canonical: "/contact" },
 };
 
@@ -14,12 +15,12 @@ const nextSteps = [
   {
     index: "01",
     title: "You write",
-    text: "Tell us about your business and what you need. A few sentences is plenty.",
+    text: "Tell us about your business and what you want to fix or grow. A few sentences is plenty.",
   },
   {
     index: "02",
     title: "We reply",
-    text: "A real human (Kiyo or Rafa) reads your message and gets back to you.",
+    text: "A real human (Kiyomi or Rafael) reads your message and gets back to you within one business day.",
   },
   {
     index: "03",
@@ -34,14 +35,8 @@ export default function ContactPage() {
       <SectionHeading
         level={1}
         kicker="Contact"
-        title={
-          <>
-            Ready when
-            <br />
-            you are.
-          </>
-        }
-        lede="Tell us what's going on: a project, a problem, or just an idea. We'll take it from there."
+        title="Book a free consultation."
+        lede="A 20-minute call covering your tech setup and your marketing. No pressure, no jargon."
       />
 
       <div className="mt-12 grid gap-12 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
@@ -81,6 +76,9 @@ export default function ContactPage() {
                 Working with clients everywhere, on-site across the LA area for
                 IT projects.
               </p>
+              <div className="mt-4">
+                <InstagramLink />
+              </div>
             </div>
           </Reveal>
         </div>

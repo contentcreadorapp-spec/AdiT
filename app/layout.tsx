@@ -27,33 +27,26 @@ const mono = Space_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "ADiT | Business Technology in Los Angeles",
+    default: "ADiT | IT Services & Marketing Agency in Los Angeles",
     template: "%s | ADiT",
   },
   description:
-    "ADiT is a business technology team run by Kiyo and Rafa in Los Angeles. IT infrastructure, cybersecurity, web development, web design, and marketing. One team for all of it.",
+    "Los Angeles IT services and marketing agency for small businesses: IT support, cybersecurity, web design, digital marketing and SEO. Hablamos español.",
   metadataBase: new URL(siteUrl),
   openGraph: {
     type: "website",
     siteName: "ADiT",
-    title: "ADiT | Business Technology in Los Angeles",
+    title: "ADiT | IT Services & Marketing Agency in Los Angeles",
     description:
-      "IT you can depend on. Websites that actually work. Marketing that gets you found. By Kiyo and Rafa, Los Angeles.",
+      "Technology that keeps you running. Marketing that gets you found. One LA team for both.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "ADiT | Business Technology in Los Angeles",
+        alt: "ADiT | IT Services & Marketing Agency in Los Angeles",
       },
     ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "ADiT | Business Technology in Los Angeles",
-    description:
-      "IT you can depend on. Websites that actually work. Marketing that gets you found.",
-    images: ["/og-image.png"],
   },
 };
 

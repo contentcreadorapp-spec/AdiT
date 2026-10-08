@@ -1,8 +1,8 @@
 import { tickerItems } from "@/content/site";
 
 /** Decorative marquee strip of disciplines. Duplicated once for a seamless loop. */
-export default function Ticker() {
-  const row = [...tickerItems, ...tickerItems];
+export default function Ticker({ items = tickerItems }: { items?: string[] }) {
+  const row = [...items, ...items];
   return (
     <div
       aria-hidden="true"

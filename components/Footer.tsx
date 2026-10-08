@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { navLinks, services } from "@/content/site";
+import { navLinks, pillars } from "@/content/site";
 import ThemeToggle from "./ThemeToggle";
+import InstagramLink from "./InstagramLink";
 
 /**
  * The footer is intentionally always dark — a fixed closing band
@@ -11,18 +12,21 @@ export default function Footer() {
     <footer className="border-t border-white/10 bg-[#131511] text-[#f5f2e9]">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
         <div className="max-w-4xl">
-          <p className="font-mono text-xs tracking-[0.22em] text-[#f5f2e9]/60 uppercase">
-            Got a project in mind?
-          </p>
-          <h2 className="mt-4 font-display text-5xl font-bold tracking-tight text-balance uppercase sm:text-6xl lg:text-7xl">
-            Ready when <span className="text-signal">you</span> are.
+          <h2 className="font-display text-5xl font-bold tracking-tight text-balance uppercase sm:text-6xl lg:text-7xl">
+            Ready for tech that <span className="text-signal">works</span> and
+            marketing that <span className="text-signal">grows</span>?
           </h2>
+          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-[#f5f2e9]/70">
+            Tell us what you want to fix or grow. We&apos;ll reply within one
+            business day with honest next steps, even if that means we&apos;re not
+            the right fit.
+          </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Link
               href="/contact"
               className="inline-flex min-h-14 items-center rounded-full bg-signal px-8 py-4 font-display text-base font-bold tracking-tight text-[#131511] uppercase transition-transform hover:scale-[1.03]"
             >
-              Start a project
+              Book a free consultation
             </Link>
             <Link
               href="/work"
@@ -33,15 +37,20 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 grid gap-10 border-t border-white/15 pt-10 sm:grid-cols-3">
+        <div className="mt-16 grid gap-10 border-t border-white/15 pt-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <p className="font-display text-xl font-bold">
               ADiT<span aria-hidden="true" className="text-ember">.</span>
             </p>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-[#f5f2e9]/60">
-              A business technology team run by Kiyo and Rafa, two Venezuelan-American
-              professionals based in Los Angeles.
+              ADiT is a Los Angeles IT services and marketing agency run by
+              Rafael Cordero and Kiyomi Villasana, two Venezuelan-American
+              professionals. IT support, cybersecurity, web design, digital
+              marketing and SEO, under one roof. Hablamos español.
             </p>
+            <div className="mt-5">
+              <InstagramLink dark />
+            </div>
           </div>
           <nav aria-label="Footer">
             <p className="font-mono text-xs tracking-[0.22em] text-[#f5f2e9]/60 uppercase">
@@ -57,23 +66,25 @@ export default function Footer() {
               ))}
             </ul>
           </nav>
-          <div>
-            <p className="font-mono text-xs tracking-[0.22em] text-[#f5f2e9]/60 uppercase">
-              Services
-            </p>
-            <ul className="mt-4 space-y-2.5">
-              {services.map((s) => (
-                <li key={s.id}>
-                  <Link
-                    href={`/services#${s.id}`}
-                    className="text-sm text-[#f5f2e9]/80 transition-colors hover:text-signal"
-                  >
-                    {s.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {pillars.map((pillar) => (
+            <div key={pillar.id}>
+              <p className="font-mono text-xs tracking-[0.22em] text-[#f5f2e9]/60 uppercase">
+                {pillar.label}
+              </p>
+              <ul className="mt-4 space-y-2.5">
+                {pillar.groups.map((g) => (
+                  <li key={g.name}>
+                    <Link
+                      href={pillar.href}
+                      className="text-sm text-[#f5f2e9]/80 transition-colors hover:text-signal"
+                    >
+                      {g.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
         <div className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-white/15 pt-8">
