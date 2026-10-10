@@ -52,6 +52,7 @@ export const pillars: Pillar[] = [
         items: [
           "Security assessments",
           "Cybersecurity strategy",
+          "Incident response & recovery",
           "Data protection & backups",
         ],
       },

@@ -195,7 +195,7 @@ export default function Home() {
         <SectionHeading
           kicker="From the field"
           title="Case files."
-          lede="One story from each pillar. Technology first."
+          lede="Two technology stories from the field."
         />
         <div className="mt-10 grid gap-5 lg:grid-cols-2">
           <Reveal>
@@ -238,22 +238,40 @@ export default function Home() {
           <Reveal delay={100}>
             <div className="flex h-full flex-col rounded-3xl bg-ink p-8 text-paper sm:p-12">
               <p className="font-mono text-xs tracking-[0.22em] text-signal uppercase">
-                Case file: local marketing
+                Case file: incident response
               </p>
               <h3 className="mt-6 font-display text-2xl font-bold leading-snug tracking-tight sm:text-3xl">
-                How a Venezuelan café got found in Los Angeles.
+                When one inbox puts 700 at risk.
               </h3>
               <p className="mt-5 leading-relaxed text-paper/70">
-                Kiyomi Villasana built Guarapo Caffé&rsquo;s brand voice,
-                Instagram presence and Google Business Profile while Rafael
-                built the site: the story, the menu and the address, impossible
-                to miss, everywhere a hungry neighbor might look.
+                A faculty email account at a private school was compromised, and
+                a phishing campaign reached more than 700 recipients, putting
+                the school&rsquo;s entire digital environment at risk. Rafael
+                Cordero moved right away: accounts secured, credentials reset,
+                authentication strengthened, third-party app access audited, and
+                data protection policies reviewed across the organization.
               </p>
               <p className="mt-4 leading-relaxed text-paper/70">
-                It&rsquo;s the same thinking we bring to every client. Get the
-                brand straight, show up where people search, and make choosing
-                you the easy part.
+                What began as a security incident became an opportunity:
+                tighter access controls, stronger email safeguards, and far less
+                exposure to the next attempt.
               </p>
+              <div className="mt-8 grid grid-cols-3 gap-4 border-t border-paper/15 pt-8">
+                {[
+                  ["700+", "phishing recipients reached"],
+                  ["1", "compromised account"],
+                  ["5", "containment actions"],
+                ].map(([value, label]) => (
+                  <div key={label}>
+                    <p className="font-display text-3xl font-bold tracking-tight text-signal sm:text-4xl">
+                      {value}
+                    </p>
+                    <p className="mt-1 font-mono text-xs tracking-[0.14em] text-paper/60 uppercase">
+                      {label}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </Reveal>
         </div>
@@ -308,7 +326,9 @@ export default function Home() {
                   Co-founder, Marketing & Strategy
                 </p>
                 <p className="mt-4 text-sm leading-relaxed text-paper/70">
-                  20+ years making brands impossible to ignore.
+                  20+ years making brands impossible to ignore, including Red
+                  Bull, T-Mobile, Covered California and Herbalife Nutrition,
+                  across the general and Hispanic markets.
                 </p>
               </div>
               <div className="rounded-2xl bg-signal p-8 text-ink">

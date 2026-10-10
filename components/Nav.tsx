@@ -53,7 +53,7 @@ export default function Nav() {
               href="/contact"
               className="inline-flex min-h-11 items-center rounded-full bg-ink px-6 py-2.5 font-display text-sm font-bold tracking-tight text-paper uppercase transition-transform hover:scale-[1.03]"
             >
-              Start a project
+              Book a free consultation
             </Link>
           </div>
 
@@ -92,7 +92,7 @@ export default function Nav() {
             onClick={() => setOpen(false)}
             className="mt-8 inline-flex min-h-14 items-center justify-center rounded-full bg-ink font-display text-lg font-bold tracking-tight text-paper uppercase"
           >
-            Start a project
+            Book a free consultation
           </Link>
           <p className="mt-6 font-mono text-xs tracking-[0.18em] text-muted uppercase">
             Los Angeles, CA · working worldwide

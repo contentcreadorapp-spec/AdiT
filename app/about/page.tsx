@@ -103,7 +103,10 @@ export default function AboutPage() {
                   Co-founder, Marketing & Strategy
                 </p>
                 <p className="mt-5 leading-relaxed text-paper/75">
-                  20+ years making brands impossible to ignore.
+                  20+ years making brands impossible to ignore. Her career
+                  includes work with Red Bull, T-Mobile, Covered California,
+                  Herbalife Nutrition and many other brands, in both the general
+                  and Hispanic markets.
                 </p>
                 <a
                   href="https://www.linkedin.com/in/kiyomiv/"
